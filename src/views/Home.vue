@@ -89,6 +89,7 @@ import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
   name: "home",
+
   data() {
     return {
       items: [
@@ -111,11 +112,10 @@ export default {
 
   methods: {
     getItems: function() {
-      console.log(this);
       this.$http
         .get("https://public-api.lykke.com/api/IsAlive")
         .then(function(response) {
-          console.log(response);
+          //  console.log(response);
           //  this.message = response;
         });
     }

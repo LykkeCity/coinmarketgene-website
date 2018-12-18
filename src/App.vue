@@ -40,13 +40,17 @@
             <div id="nav">
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                  <li class="nav-item active">
+                  <li v-bind:class="{ 'nav-item active':thepath=='/', 'nav-item':thepath!='/'}">
                     <router-link class="nav-link" to="/">Home</router-link>
                   </li>
-                  <li class="nav-item">
+                  <li
+                    v-bind:class="{ 'nav-item active':thepath=='/metrics', 'nav-item':thepath!='/metrics'}"
+                  >
                     <router-link class="nav-link" to="/metrics">Metrics</router-link>
                   </li>
-                  <li class="nav-item">
+                  <li
+                    v-bind:class="{ 'nav-item active':thepath=='/about', 'nav-item':thepath!='/about'}"
+                  >
                     <router-link class="nav-link" to="/about">About</router-link>
                   </li>
                 </ul>
@@ -59,6 +63,35 @@
     <router-view/>
   </div>
 </template>
+
+<script>
+export default {
+  name: "app",
+
+  data() {
+    return {
+      thepath: "---"
+    };
+  },
+
+  methods: {
+    handleStyles() {
+      console.log(this.$route.path);
+      this.thepath = this.$route.path;
+    }
+  },
+  // Handle styles when the app is initially loaded
+  mounted() {
+    this.handleStyles();
+  },
+  // Handle styles when the route changes
+  watch: {
+    $route() {
+      this.handleStyles();
+    }
+  }
+};
+</script>
 
 <style lang="scss">
 @import "~bootstrap/scss/functions";
