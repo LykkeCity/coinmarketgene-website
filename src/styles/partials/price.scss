@@ -1,0 +1,52 @@
+.price_view {
+  padding: rem(14px 0);
+}
+
+.price_info {
+  &__value,
+  &__change {
+    font-weight: getFontWeight(extra);
+    font-size: rem(16px);
+    letter-spacing: 0;
+    margin-bottom: rem(5px);
+  }
+
+  &__accent {
+    margin-bottom: rem(30px);
+  }
+
+  &__table {
+    width: 100%;
+    max-width: 290px;
+    font-weight: getFontWeight(semibold);
+    font-size: rem(12px);
+    letter-spacing: 0;
+    margin-bottom: rem(30px);
+
+    td {
+      padding-top: rem(9px);
+      padding-bottom: rem(9px);
+
+      &:first-child {
+        color: getColor(dark-grey);
+        padding-right: rem(20px);
+      }
+    }
+  }
+}
+
+.chart {
+  margin-bottom: rem(30px);
+
+  > img {
+    width: 100%;
+  }
+}
+
+.exchange_filter {
+  margin-top: rem(15px);
+
+  .col {
+    margin-bottom: rem(30px);
+  }
+}

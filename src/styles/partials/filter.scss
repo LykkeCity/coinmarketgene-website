@@ -1,0 +1,19 @@
+.filter {
+  padding: rem(22px) 0;
+}
+
+.sort_control {
+  cursor: pointer;
+  transition: color $transition;
+
+  .icon {
+    font-size: rem(7px);
+    vertical-align: middle;
+    display: inline-block;
+    margin-top: -1px;
+  }
+
+  &:hover {
+    color: getColor(primary);
+  }
+}
