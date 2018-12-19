@@ -3,13 +3,22 @@
     <section class="filter">
       <div class="btn-toolbar justify-content-md-center" role="toolbar">
         <div class="btn-group mr-3" role="group" aria-label="Actions" data-toggle="buttons">
-          <label class="btn btn-light btn-lg active">
+          <label
+            v-on:click="operationBuy"
+            v-bind:class="{ 'btn btn-light btn-lg active':operation==='buy', 'btn btn-light btn-lg':operation!='buy' }"
+          >
             <input type="radio" name="actions" value="buy" autocomplete="off" checked> Buy
           </label>
-          <label class="btn btn-light btn-lg">
+          <label
+            v-on:click="operationSell"
+            v-bind:class="{ 'btn btn-light btn-lg active':operation==='sell', 'btn btn-light btn-lg':operation!='sell' }"
+          >
             <input type="radio" name="actions" value="sell" autocomplete="off"> Sell
           </label>
-          <label class="btn btn-light btn-lg">
+          <label
+            v-on:click="operationBoth"
+            v-bind:class="{ 'btn btn-light btn-lg active':operation==='both', 'btn btn-light btn-lg':operation!='both' }"
+          >
             <input type="radio" name="actions" value="both" autocomplete="off"> Both
           </label>
         </div>
@@ -144,7 +153,7 @@
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+//import HelloWorld from "@/components/HelloWorld.vue";
 //import Vue from "vue";
 //Vue.use(vueResource);
 
@@ -153,6 +162,7 @@ export default {
 
   data() {
     return {
+      operation: "buy",
       items: [
         /*       {
           img: "/images/exchange/binance-coin-logo-png-transparent.png",
@@ -180,10 +190,21 @@ export default {
           this.items = response.body.items;
           //  this.message = response;
         });
+    },
+
+    operationBuy: function() {
+      this.operation = "buy";
+    },
+
+    operationSell: function() {
+      this.operation = "sell";
+    },
+    operationBoth: function() {
+      this.operation = "both";
     }
-  },
+  } /*,
   components: {
     HelloWorld
-  }
+  }*/
 };
 </script>
