@@ -177,7 +177,7 @@ export default {
         .get("https://coinmarketgene.com/api/Exchanges/list")
         .then(function(response) {
           console.log(response);
-          this.items = response.items;
+          this.items = response.body.items;
           //  this.message = response;
         });
     }
