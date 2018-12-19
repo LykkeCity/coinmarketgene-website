@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-   <section class="filter">
+    <section class="filter">
       <div class="btn-toolbar justify-content-md-center" role="toolbar">
         <div class="btn-group mr-3" role="group" aria-label="Actions" data-toggle="buttons">
           <label class="btn btn-light btn-lg active">
@@ -154,7 +154,7 @@ export default {
   data() {
     return {
       items: [
-        {
+        /*       {
           img: "/images/exchange/binance-coin-logo-png-transparent.png",
           exchange: "Binance",
           volume: "$ 833,746,525",
@@ -162,7 +162,7 @@ export default {
           depth: "BTC 833,746,525",
           totalcost: "9.91",
           chartimg: "/images/chart.png"
-        }
+        }*/
       ]
     };
   },
@@ -174,9 +174,10 @@ export default {
   methods: {
     getItems: function() {
       this.$http
-        .get("https://public-api.lykke.com/api/IsAlive")
+        .get("https://coinmarketgene.com/api/Exchanges/list")
         .then(function(response) {
-          //  console.log(response);
+          console.log(response);
+          this.items = response.items;
           //  this.message = response;
         });
     }
