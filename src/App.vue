@@ -37,30 +37,50 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div id="nav">
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                  <li v-bind:class="{ 'nav-item active':thepath=='/', 'nav-item':thepath!='/'}">
-                    <router-link class="nav-link" to="/">Home</router-link>
-                  </li>
-                  <li
-                    v-bind:class="{ 'nav-item active':thepath=='/metrics', 'nav-item':thepath!='/metrics'}"
-                  >
-                    <router-link class="nav-link" to="/metrics">Metrics</router-link>
-                  </li>
-                  <li
-                    v-bind:class="{ 'nav-item active':thepath=='/about', 'nav-item':thepath!='/about'}"
-                  >
-                    <router-link class="nav-link" to="/about">About</router-link>
-                  </li>
-                </ul>
+              <ul class="navbar-nav ml-auto">
+                <li v-bind:class="{ 'nav-item active':thepath=='/', 'nav-item':thepath!='/'}">
+                  <router-link class="nav-link" to="/">Home</router-link>
+                </li>
+                <li
+                  v-bind:class="{ 'nav-item active':thepath=='/metrics', 'nav-item':thepath!='/metrics'}"
+                >
+                  <router-link class="nav-link" to="/metrics">Metrics</router-link>
+                </li>
+                <li
+                  v-bind:class="{ 'nav-item active':thepath=='/about', 'nav-item':thepath!='/about'}"
+                >
+                  <router-link class="nav-link" to="/about">About</router-link>
+                </li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="main">
+      <div class="container">
+        <router-view/>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <div class="footer_wrapper">
+          <div class="row align-items-center">
+            <div class="col-6">
+              <div class="copy">© 2018</div>
+            </div>
+            <div class="col-6 text-right">
+              <div class="social">
+                <a href="#" target="_blank" class="social__link"><i class="icon icon--facebook"></i></a>
+                <a href="#" target="_blank" class="social__link"><i class="icon icon--twitter"></i></a>
+                <a href="#" target="_blank" class="social__link"><i class="icon icon--reddit"></i></a>
+                <a href="#" target="_blank" class="social__link"><i class="icon icon--telegram"></i></a>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </nav>
-    <router-view/>
+    </div>
   </div>
 </template>
 

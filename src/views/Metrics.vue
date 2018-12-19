@@ -1,5 +1,5 @@
 <template>
-  <div class="metrics">
+  <section class="section metrics">
     <h1>This is a metrics page</h1>
-  </div>
+  </section>
 </template>
