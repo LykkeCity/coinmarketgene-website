@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-   <!-- <section class="filter">
+   <section class="filter">
       <div class="btn-toolbar justify-content-md-center" role="toolbar">
         <div class="btn-group mr-3" role="group" aria-label="Actions" data-toggle="buttons">
           <label class="btn btn-light btn-lg active">
@@ -59,7 +59,7 @@
           </label>
         </div>
       </div>
-    </section>-->
+    </section>
 
     <section class="content">
       <div class="table-responsive">
