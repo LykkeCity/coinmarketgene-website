@@ -1,5 +1,66 @@
 <template>
   <div class="home">
+   <!-- <section class="filter">
+      <div class="btn-toolbar justify-content-md-center" role="toolbar">
+        <div class="btn-group mr-3" role="group" aria-label="Actions" data-toggle="buttons">
+          <label class="btn btn-light btn-lg active">
+            <input type="radio" name="actions" value="buy" autocomplete="off" checked> Buy
+          </label>
+          <label class="btn btn-light btn-lg">
+            <input type="radio" name="actions" value="sell" autocomplete="off"> Sell
+          </label>
+          <label class="btn btn-light btn-lg">
+            <input type="radio" name="actions" value="both" autocomplete="off"> Both
+          </label>
+        </div>
+        <div class="btn-group mr-3" role="group" aria-label="BTC value" data-toggle="buttons">
+          <label class="btn btn-light btn-lg active">
+            <input type="radio" name="btcvalue" value="0" autocomplete="off" checked> O BTC
+          </label>
+          <label class="btn btn-light btn-lg">
+            <input type="radio" name="btcvalue" value="1" autocomplete="off"> 1 BTC
+          </label>
+          <label class="btn btn-light btn-lg">
+            <input type="radio" name="btcvalue" value="10" autocomplete="off"> 10 BTC
+          </label>
+          <label class="btn btn-light btn-lg">
+            <input type="radio" name="btcvalue" value="100" autocomplete="off"> 100 BTC
+          </label>
+        </div>
+        <div class="btn-group mr-3" role="group" aria-label="Currency" data-toggle="buttons">
+          <label class="btn btn-light btn-lg active">
+            <input type="radio" name="currency" value="usd" autocomplete="off" checked> USD
+          </label>
+          <label class="btn btn-light btn-lg">
+            <input type="radio" name="currency" value="usdt" autocomplete="off"> USDT
+          </label>
+          <label class="btn btn-light btn-lg">
+            <input type="radio" name="currency" value="both" autocomplete="off"> Both
+          </label>
+        </div>
+        <div class="btn-group" role="group" aria-label="Time period" data-toggle="buttons">
+          <label class="btn btn-light btn-lg active">
+            <input type="radio" name="period" value="minute" autocomplete="off" checked> 1 M
+          </label>
+          <label class="btn btn-light btn-lg">
+            <input type="radio" name="period" value="hour" autocomplete="off"> 1 H
+          </label>
+          <label class="btn btn-light btn-lg">
+            <input type="radio" name="period" value="halfday" autocomplete="off"> 12 H
+          </label>
+          <label class="btn btn-light btn-lg">
+            <input type="radio" name="period" value="day" autocomplete="off"> 24 H
+          </label>
+          <label class="btn btn-light btn-lg">
+            <input type="radio" name="period" value="week" autocomplete="off"> 1 W
+          </label>
+          <label class="btn btn-light btn-lg">
+            <input type="radio" name="period" value="month" autocomplete="off"> 1 M
+          </label>
+        </div>
+      </div>
+    </section>-->
+
     <section class="content">
       <div class="table-responsive">
         <table class="table table_market">
